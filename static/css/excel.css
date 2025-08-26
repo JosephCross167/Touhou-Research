@@ -1,6 +1,7 @@
 body {
     text-align: center;
     background-color:lightblue;
+    padding-bottom: 300px;
     }
 table {
     width: 100%;
@@ -35,4 +36,9 @@ button:hover {
     width: 100%;
     text-align: left;
     color: gray;
+}
+audio {
+    position: fixed;
+    right: 0%;
+    top: 0%;
 }

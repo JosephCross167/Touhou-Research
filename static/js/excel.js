@@ -10,6 +10,7 @@ function rankupdate()
 //音乐音量
 let audio = document.getElementsByTagName('audio')[0];
 audio.volume = 0.5; // 设置音量为50%
+audio.loop = true; // 循环播放
 
 //添加
 function addrow()
