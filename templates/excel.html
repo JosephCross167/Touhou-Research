@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/excel.css">
+    <title>excel</title>
+</head>
+
+<body>
+    <h1>东方大调查</h1>
+    <h2>列出你最喜欢的东方人物吧！</h2>
+    <table id="exceltable">
+        <tr>
+            <th>排名</th>
+            <th>姓名</th>
+            <th>出场作品</th>
+            <th>喜爱程度</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>博丽灵梦</td>
+            <td>东方红魔乡</td>
+            <td>
+                <label>
+                    <input type="radio" name="rating1" value="1">1
+                    <input type="radio" name="rating1" value="2">2
+                    <input type="radio" name="rating1" value="3">3
+                    <input type="radio" name="rating1" value="4">4
+                    <input type="radio" name="rating1" value="5">5
+                </label>
+            </td>
+            <td>
+                <button onclick="editrow(this)">修改</button>
+                <button onclick="deleterow(this)">删除</button>
+            </td>
+        </tr>
+    </table>
+    <button onclick="addrow()" style="font-size: 30px;font-weight: bold;padding: 10px 100px;">添加</button>
+
+    <script src="../static/js/excel.js"></script>
+</body>
+</html>
