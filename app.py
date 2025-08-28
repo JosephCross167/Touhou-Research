@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import config
 from exts import db
 from models import User
@@ -14,9 +14,10 @@ db.init_app(app)
 migrate = Migrate(app, db)
 app.register_blueprint(au_bp)
 app.register_blueprint(qa_bp)
+
 @app.route('/')
 def hello_world():  # put application's code here
-    return 'Hello World!'
+    return render_template("register.html")
 
 
 if __name__ == '__main__':

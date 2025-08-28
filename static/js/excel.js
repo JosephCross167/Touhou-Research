@@ -82,3 +82,7 @@ function saverow(r)
         <button onclick="deleterow(this)">删除</button>
     `;
 }
+
+//导航栏
+let present_option = document.getElementById("investigation");
+present_option.style.fontWeight = "bold";

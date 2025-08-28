@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>base</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <title>{% block title %}base{% endblock %}</title>
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
-    
+    <nav class="navbar">
+        <span>东方小网站</span>
+        <a href="/" id="home">首页</a>
+        <a href="/excel" id="investigation">调查</a>
+        <a href="/user" id="user">用户</a>
+    </nav>
+    <main>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    <script src="../static/js/base.js"></script>
+
 </body>
 </html>

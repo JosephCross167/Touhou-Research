@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 bp = Blueprint("author", __name__, url_prefix="/author")
 

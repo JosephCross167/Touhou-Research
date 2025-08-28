@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/excel.css">
-    <title>excel</title>
-</head>
+{% extends "base.html" %}
 
-<body>
+{% block title %}
+    东方大调查
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="../static/css/excel.css">
+{% endblock %}
+
+{% block content %}
     <audio controls src="../static/music/あすとらるTrip - 砕月 (ココ&さつき が てんこもり's 作業妨害Remix).mp3"></audio>
 
     <h1>东方大调查</h1>
@@ -42,5 +44,4 @@
     <button onclick="addrow()" style="font-size: 30px;font-weight: bold;padding: 10px 100px;">添加</button>
 
     <script src="../static/js/excel.js"></script>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+登录
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="../static/css/login, register.css">
+{% endblock %}
+
+{% block content %}
+    <form action="/login" method="post">
+        <label for="username">用户名</label>
+        <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+        <br>
+        <label for="password">密码</label>
+        <input type="password" id="password" name="password" placeholder="请输入密码" required>
+        <br>
+        <button type="submit" style="font-size: 30px;font-weight: bold;padding: 5px 50px;margin-top: 30px">登录</button>
+        <a href="/register" style="font-style: italic;font-size: 15px">没有账号？点击注册</a>
+    </form>
+{% endblock %}
