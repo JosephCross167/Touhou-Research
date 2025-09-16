@@ -6,6 +6,7 @@
 
 {% block head %}
     {{ super() }}
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../static/css/login, register.css">
 {% endblock %}
 
@@ -18,9 +19,10 @@
         <input type="text" id="email" name="email" placeholder="请输入邮箱" required>
         <br>
         <label for="verify">验证码</label>
-        <input type="text" id="verify" name="verify" style="width: 200px" placeholder="请输入验证码" required>
-        <button type="button" style="font-size: 15px;padding: 6px 9px;margin-left: 0px;border-radius:0">获取验证码</button>
-        <br>
+        <div class="verify-group">
+            <input type="text" id="verify" name="verify" placeholder="请输入验证码" required>
+            <button type="button" onclick="GetCaptcha()">获取验证码</button>
+        </div>
         <label for="password">密码</label>
         <input type="password" id="password" name="password" placeholder="请输入密码" required>
         <br>
@@ -28,5 +30,8 @@
         <input type="password" id="confirm" name="confirm" placeholder="请再次输入密码" required>
         <br>
         <button type="submit" style="font-size: 30px;font-weight: bold;padding: 5px 50px;margin-top: 30px">注册</button>
+        <a href="/author/login" style="font-style: italic;font-size: 15px">已有账号？点击登录</a>
     </form>
+
+    <script src="../static/js/register.js"></script>
 {% endblock %}

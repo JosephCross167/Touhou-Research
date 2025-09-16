@@ -1,9 +1,11 @@
 input[type="text"], input[type="password"] {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 300px;
 }
 body {
     padding-top: 150px;
+    display: flex;
+    flex-direction: column;
 }
 label {
     display: block;
@@ -11,7 +13,7 @@ label {
     margin-bottom: 5px;
     text-align: left;
 }
-form label, form input[type="text"], form input[type="password"] {
+form label {
     width: 300px;
     margin: 5px auto;
     text-align: left;
@@ -21,4 +23,20 @@ form a {
     width: 300px;
     text-align: center;
     margin: 10px auto 0 auto;
+}
+ .verify-group {
+    display: flex;
+    width: 320px;
+    margin: 5px auto;
+}
+.verify-group input[type="text"] {
+    flex: 1;
+    width: auto;
+}
+.verify-group button {
+    margin: 0;
+    height: 36px;
+    font-size: 15px;
+    margin-left: 0px;
+    border-radius: 0;
 }
